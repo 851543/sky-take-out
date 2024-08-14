@@ -1,6 +1,6 @@
-**/target/ linguist-language=Java
-.idea linguist-language=Java
-*.iml linguist-language=Java
-*.class linguist-language=Java
-*Test.java linguist-language=Java
-**/test/ linguist-language=Java
+**/target/
+.idea
+*.iml
+*.class
+*Test.java
+**/test/
