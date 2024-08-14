@@ -11,3 +11,4 @@
 *.ts linguist-language=Java
 *.css linguist-language=Java
 *.scss linguist-language=Java
+*.vim linguist-language=Java
