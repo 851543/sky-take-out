@@ -2,3 +2,7 @@
 2022/09/19 14:13:10 [emerg] 6884#1840: CreateFile() "E:\2022新版课程\苍穹外卖项目\授课资料\day01\资料\前端运行环境\nginx-1.20.2/conf/nginx.conf" failed (1113: No mapping for the Unicode character exists in the target multi-byte code page)
 2023/03/04 10:52:01 [emerg] 12092#12960: CreateFile() "E:\授课\北京JavaEE就业406期\苍穹外卖项目\资料\day01\前端运行环境\nginx-1.20.2/conf/nginx.conf" failed (1113: No mapping for the Unicode character exists in the target multi-byte code page)
 2024/08/13 20:53:09 [emerg] 15236#10160: bind() to 0.0.0.0:80 failed (10013: An attempt was made to access a socket in a way forbidden by its access permissions)
+2024/08/15 20:33:13 [error] 20136#20128: *147 upstream timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while reading response header from upstream, client: 127.0.0.1, server: localhost, request: "POST /api/employee/status/0?id=8 HTTP/1.1", upstream: "http://127.0.0.1:8080/admin/employee/status/0?id=8", host: "localhost:85", referrer: "http://localhost:85/"
+2024/08/16 14:35:07 [emerg] 14560#15540: CreateFile() "E:\idea\project\Java\heima\sky-take-out\nginx-1.20.2/logs/access.log" failed (5: Access is denied)
+2024/08/16 14:36:53 [emerg] 3376#20300: CreateFile() "E:\idea\project\Java\heima\sky-take-out\nginx-1.20.2/logs/access.log" failed (5: Access is denied)
+2024/08/16 14:37:33 [emerg] 3356#4736: CreateFile() "E:\idea\project\Java\heima\sky-take-out\nginx-1.20.2/logs/access.log" failed (5: Access is denied)
