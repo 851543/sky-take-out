@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.sky.mapper.DishMapper">
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        insert into dish(name, category_id, price, image, description, status, create_time, update_time, create_user, update_user) values
+        (#{name}, #{categoryId}, #{price}, #{image}, #{description}, #{status}, #{createTime}, #{updateTime}, #{createUser}, #{updateUser})
+    </insert>
+    <select id="pageQuery" resultType="com.sky.vo.DishVO">
+        select a.*,b.name as  category_name from dish as a left join category b on b.id = a.category_id
+        <where>
+            <if test="name != null and name != ''">
+                and a.name like concat('%',#{name},'%')
+            </if>
+            <if test="status != null">
+                and a.status = #{status}
+            </if>
+            <if test="categoryId != null">
+                and a.category_id = #{categoryId}
+            </if>
+        </where>
+        order by a.create_time desc
+    </select>
+</mapper>
