@@ -6,3 +6,4 @@
 2024/08/16 14:35:07 [emerg] 14560#15540: CreateFile() "E:\idea\project\Java\heima\sky-take-out\nginx-1.20.2/logs/access.log" failed (5: Access is denied)
 2024/08/16 14:36:53 [emerg] 3376#20300: CreateFile() "E:\idea\project\Java\heima\sky-take-out\nginx-1.20.2/logs/access.log" failed (5: Access is denied)
 2024/08/16 14:37:33 [emerg] 3356#4736: CreateFile() "E:\idea\project\Java\heima\sky-take-out\nginx-1.20.2/logs/access.log" failed (5: Access is denied)
+2024/08/18 21:11:54 [error] 20460#3608: *52 CreateFile() "E:\idea\project\Java\heima\sky-take-out\nginx-1.20.2/html/sky/doc.html" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /doc.html HTTP/1.1", host: "localhost:85"
