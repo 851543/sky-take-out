@@ -67,5 +67,46 @@
         </where>
         order by order_time desc
     </select>
+    <select id="sumByHashMap" resultType="java.lang.Double">
+        select sum(amount) from orders
+        <where>
+            <if test="beginTime != null">
+                and order_time &gt; #{beginTime}
+            </if>
+            <if test="endTime != null">
+                and order_time &lt; #{endTime}
+            </if>
+            <if test="status != null">
+                and status = #{status}
+            </if>
+        </where>
+    </select>
+    <select id="countByHashMap" resultType="java.lang.Integer">
+        select count(id) from orders
+        <where>
+            <if test="beginTime != null">
+                and order_time &gt; #{beginTime}
+            </if>
+            <if test="endTime != null">
+                and order_time &lt; #{endTime}
+            </if>
+            <if test="status != null">
+                and status = #{status}
+            </if>
+        </where>
+    </select>
+    <select id="getSalesTop10" resultType="com.sky.dto.GoodsSalesDTO">
+        select b.name as name, sum(b.number) as number from orders a,order_detail b
+        where a.id = b.order_id and a.status = 5
+        <if test="beginTime != null">
+            and order_time &gt; #{beginTime}
+        </if>
+        <if test="endTime != null">
+            and order_time &lt; #{endTime}
+        </if>
+        group by name
+        order by number desc
+        limit 0,10
+    </select>
 
 </mapper>

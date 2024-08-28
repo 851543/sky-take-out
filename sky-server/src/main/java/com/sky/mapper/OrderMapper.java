@@ -7,6 +7,7 @@ import com.sky.entity.Orders;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 import java.time.LocalDateTime;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -58,4 +59,27 @@ public interface OrderMapper {
      * @param status
      */
     @Select("select count(id) from orders where status = #{status}")
-    Integer countStatus(Integer status);}
+    Integer countStatus(Integer status);
+
+    /**
+     * 根据动态条件统计营业额数据
+     * @param hashMap
+     * @return
+     */
+    Double sumByHashMap(HashMap hashMap);
+
+    /**
+     * 根据动态条件统计订单额数据
+     * @param hashMap
+     * @return
+     */
+    Integer countByHashMap(HashMap hashMap);
+
+    /**
+     * 根据动态条件统计销量排名前10
+     * @param beginTime
+     * @param endTime
+     * @return
+     */
+    List<GoodsSalesDTO> getSalesTop10(LocalDateTime beginTime, LocalDateTime endTime);
+}
